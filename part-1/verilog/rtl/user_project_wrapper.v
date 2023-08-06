@@ -29,9 +29,7 @@
  *-------------------------------------------------------------
  */
 
-module user_project_wrapper #(
-    parameter BITS = 32
-) (
+module user_project_wrapper (
 `ifdef USE_POWER_PINS
     inout vdda1,	// User area 1 3.3V supply
     inout vdda2,	// User area 2 3.3V supply
@@ -93,9 +91,9 @@ user_proj_timer mprj (
 
     // IO Pads
 
-    .io_in (io_in[37:26]),
-    .io_out(io_out[37:26]),
-    .io_oeb(io_oeb[37:26])
+    .io_in (io_in[37:27]),
+    .io_out(io_out[37:27]),
+    .io_oeb(io_oeb[37:27])
 );
 
 endmodule	// user_project_wrapper
