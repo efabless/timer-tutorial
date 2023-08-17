@@ -7,9 +7,13 @@
 # - IO ports are assumed to be asynchronous. If they're synchronous to the clock, update the variable IO_SYNC to 1.
 #   As well, update in_ext_delay and out_ext_delay with the required I/O external delays.
 
+set ::env(IO_SYNC) 0
+
 #------------------------------------------#
 # Pre-defined Constraints
 #------------------------------------------#
+
+
 
 # Clock network
 if {[info exists ::env(CLOCK_PORT)] && $::env(CLOCK_PORT) != ""} {
